@@ -4,7 +4,6 @@
 
 these versions are currently supported and build automaticly readu for use:
 --------------------
-| Unix_0.1.2       |
 | Windows_0.1.2    |
 --------------------
 
