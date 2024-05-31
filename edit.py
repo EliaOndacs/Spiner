@@ -26,7 +26,6 @@ ValidInputModes = [
 def main():
     global FILE
     InputMode = ValidInputModes[0]
-    jmp = False
     KUFJBTCM = ">"
     cursor = 0
     lineTaken = 0
@@ -36,7 +35,6 @@ def main():
         #runtime variables
         TermSize = (os.get_terminal_size().columns,os.get_terminal_size().lines)
         lineTaken = 0
-        jmp = False
         #text processing
         #text DrawLoop
         print(Fore.YELLOW + "-"*TermSize[0] + Style.RESET_ALL)
