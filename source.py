@@ -2,6 +2,7 @@ from os import system,path,listdir,getcwd
 from json import loads as JsonLoad
 from colorama import *
 from tomllib import loads as TomlLoad
+import keyboard
 
 parent_dir = path.dirname(path.realpath(__file__))
 
@@ -24,6 +25,12 @@ def ListToString(_list: list[str]) -> str:
     for i in _list:
         string += i + " "
     return string
+
+def getc():
+    try:
+        return keyboard.read_key()
+    except KeyboardInterrupt:
+        return None
 
 def RunCommand(command,args):
     system(f"{command} {ListToString(args)}")
