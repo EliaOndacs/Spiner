@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-these versions are currently supported and build automaticly readu for use:
+these versions are now supported and build automatically for use:
 --------------------
 | Windows_0.1.2    |
 --------------------
