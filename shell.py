@@ -34,8 +34,14 @@ def OneLine(line: str):
                 os.remove(target)
             else:
                 exit(-1)
-        case ["Pkg",*commands]:
-            RunCommand(config["DefaultPkg"],list(commands))
+        case ["Pkg",do,*commands]:
+            match do:
+                case "install":
+                    RunCommand(config["Pkg"]["Install"],list(commands))
+                case "uninstall":
+                    RunCommand(config["Pkg"]["Uninstall"],list(commands))
+                case "all":
+                    RunCommand(config["Pkg"]["All"],list(commands))
 
 def RunFromFile(path: str):
     if not path.endswith(".SpinSh"):

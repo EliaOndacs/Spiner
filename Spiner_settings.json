@@ -1,3 +1,7 @@
 {
-    "DefaultPkg":"pip"
+  "Pkg": {
+    "Install": "py -m pip install",
+    "Uninstall": "py -m pip uninstall",
+    "All": "py -m pip list"
+  }
 }
