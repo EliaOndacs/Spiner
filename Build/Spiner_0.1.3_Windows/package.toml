@@ -1,8 +1,0 @@
-
-[Scripts]
-Create = ["py","Create.pyc"]
-Remove = ["py","Remove.pyc"]
-Edit = ["py","edit.pyc"]
-Pkg = ["py","pkg.pyc"]
-Setting = ["py","menuconfig.pyc"]
-Shell = ["py","shell.pyc"]

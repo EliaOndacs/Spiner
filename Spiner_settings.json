@@ -1,7 +1,7 @@
 {
   "Pkg": {
-    "Install": "py -m pip install",
-    "Uninstall": "py -m pip uninstall",
-    "All": "py -m pip list"
+    "Install": "pip3 install",
+    "Uninstall": "pip3 uninstall",
+    "All": "pip3 list"
   }
 }
