@@ -16,7 +16,10 @@ files_to_copy: list[str] = [
     "source.py",
     "Spiner_settings.json",
     ("Spiner.sh" if platform == "Unix" else "Spiner.bat"),
-    "UseConfig"
+    "UseConfig",
+    "License",
+    "Readme",
+    "SECURITY.md"
 ]
 
 BuildDir = "Build"
