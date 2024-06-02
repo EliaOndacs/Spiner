@@ -1,6 +1,3 @@
+- Pkg manager update !done
 
-- Pkg manager update
-
-
-
-
+- Adding structures InProgress
