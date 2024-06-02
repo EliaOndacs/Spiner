@@ -1,0 +1,8 @@
+
+[Scripts]
+Create = ["py","Create.py"]
+Remove = ["py","Remove.py"]
+Edit = ["py","edit.py"]
+Pkg = ["py","pkg.py"]
+Setting = ["py","menuconfig.py"]
+Shell = ["py","shell.py"]

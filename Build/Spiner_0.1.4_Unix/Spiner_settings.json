@@ -1,0 +1,7 @@
+{
+  "Pkg": {
+    "Install": "pip3 install",
+    "Uninstall": "pip3 uninstall",
+    "All": "pip3 list"
+  }
+}
