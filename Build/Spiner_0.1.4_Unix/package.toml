@@ -1,0 +1,8 @@
+
+[Scripts]
+Create = ["python3","Create.pyc"]
+Remove = ["python3","Remove.pyc"]
+Edit = ["python3","edit.pyc"]
+Pkg = ["python3","pkg.pyc"]
+Setting = ["python3","menuconfig.pyc"]
+Shell = ["python3","shell.pyc"]
