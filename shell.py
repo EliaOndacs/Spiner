@@ -1,6 +1,6 @@
 from source import *
 import sys,os,shutil
-
+import requests
 
 def OneLine(line: str):
     match line.split(" "):
@@ -42,6 +42,14 @@ def OneLine(line: str):
                     RunCommand(config["Pkg"]["Uninstall"],list(commands))
                 case "all":
                     RunCommand(config["Pkg"]["All"],list(commands))
+                case "fetch":
+                    response = requests.get(sys.argv[1])
+                    if response.status_code == 200:
+                        with open(sys.argv[2], 'wb') as f:
+                            f.write(response.content)
+                        print(Fore.GREEN + 'Content downloaded successfully!' + Style.RESET_ALL)
+                    else:
+                        print(Fore.RED + 'Failed to download the Content.' + Style.RESET_ALL)
 
 def RunFromFile(path: str):
     if not path.endswith(".SpinSh"):
