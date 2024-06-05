@@ -3,9 +3,9 @@
 ## Supported Versions
 
 these versions are now supported and build automatically for use:
---------------------
-| Windows_0.1.2    |
---------------------
+---------------------------------------
+| ! No PreBuild Neither Safe Builld ! |
+---------------------------------------
 
 ## Reporting a Vulnerability
 
