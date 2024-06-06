@@ -19,7 +19,8 @@ files_to_copy: list[str] = [
     "UseConfig",
     "License",
     "Readme",
-    "SECURITY.md"
+    "SECURITY.md",
+    ("resources" + os.sep + "HelpMe.md")
 ]
 
 BuildDir = "Build"
