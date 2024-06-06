@@ -3,9 +3,13 @@
 ## Supported Versions
 
 these versions are now supported and build automatically for use:
----------------------------------------
-| ! No PreBuild Neither Safe Builld ! |
----------------------------------------
+----------------------
+| ! No Safe Builld ! |
+----------------------
+
+Warning:
+    currently no build is supported, or is safe
+    im currently working on features so every build is unsafe and with loads of bugs
 
 ## Reporting a Vulnerability
 
