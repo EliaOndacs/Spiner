@@ -9,17 +9,7 @@ i already made a Unix-like and Windows build in the Build Directory.
 but you can make a custom build too!.
 
 heres how to do it:
-    step 1:
-        use python to run cmp.py file with two arguments like this:
-            `python3 cmp.py {YourPlatform[Unix/Windows]} {BuildName}`
-    step 2 :
-        after the build finished.
-        open the BuildDirectory and your BuildName,
-        the build is here, you gotta probably make some small changes, inside the package.toml
-        change .py files to .pyc
-    step 3 (Unix-like Only):
-        replace "py" in the first slot of every list with "python3"
-
-    finally:
-        in the end you can put the buildDirectory with your BuildName on it anywhere, also remember to add the Spiner.bat or Spiner.sh to your path so you can access it from anywhere
+    use python to run cmp.py file with two arguments like this:
+        `python3 cmp.py {YourPlatform[Unix/Windows]} {BuildName}`
+    in the end you can put the buildDirectory with your BuildName on it anywhere, also remember to add the Spiner.bat or Spiner.sh to your path so you can access it from anywhere
 
