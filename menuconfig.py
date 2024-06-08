@@ -1,1 +1,0 @@
-raise NotImplementedError("At The Current Time Of Being MenuConfig Is Not Implemented!\ndetail: this script is gonna go under re-constructions, after re-constructions are done you should be able to use this\nscript again.")
