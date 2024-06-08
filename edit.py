@@ -4,6 +4,8 @@ import sys,os
 
 
 
+
+
 def __fu__(_o: list, _to: int, _with: Any):
     new_o = _o
     if len(_o) >= _to:
@@ -14,6 +16,11 @@ def __fu__(_o: list, _to: int, _with: Any):
 
 
 FILE: list[str] = []
+LastRecordedFilePath: str = None
+
+if sys.argv[-1] != sys.argv[0]:
+    FILE = open(sys.argv[-1],"r").read().split("\n")
+    LastRecordedFilePath = sys.argv[-1]
 
 
 TermSize = (os.get_terminal_size().columns,os.get_terminal_size().lines)
@@ -23,8 +30,9 @@ ValidInputModes = [
 ]
 
 
+
 def main():
-    global FILE
+    global FILE, LastRecordedFilePath
     InputMode = ValidInputModes[0]
     KUFJBTCM = ">"
     cursor = 0
@@ -47,6 +55,8 @@ def main():
         lineTaken += 1
         #input
         inp = input(InputMode[1]+" "+Fore.CYAN)
+        if LastRecordedFilePath:
+            FILE = open(LastRecordedFilePath,"r").read().split("\n")
         if InputMode[0] == "command":
             match inp.split():
                 case ["save",fp] | ["s",fp]:
@@ -54,8 +64,10 @@ def main():
                         for line in FILE:
                             output.write(line + "\n")
                     output.close()
+                    LastRecordedFilePath = fp
                 case ["load",fp] | ["l",fp]:
                     FILE = open(fp,"r").read().split("\n")
+                    LastRecordedFilePath = fp
                 case ["SetCursor",ln] | ["sc",ln]:
                     cursor = int(ln)
                 case ["rml", ln] | ["RemoveLine", ln]:
