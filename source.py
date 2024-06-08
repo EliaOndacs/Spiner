@@ -35,15 +35,18 @@ def getc():
 def RunCommand(command,args):
     system(f"{command} {ListToString(args)}")
 
+with open(path.join(parent_dir,"UseConfig")) as d:
+    ConfigPath = TomlLoad(d.read())["active"]
+
 if ".spin" in listdir(getcwd()):
     IsSpin = True
+    Spin = path.join(getcwd(),".spin")
 else:
     IsSpin = False
+    Spin = ConfigPath
 if IsSpin == True:
     with open(".spin") as f:
         config = JsonLoad(f.read())
 else:
-    with open(path.join(parent_dir,"UseConfig")) as d:
-        ConfigPath = TomlLoad(d.read())["active"]
     with open(ConfigPath) as f:
         config = JsonLoad(f.read())
