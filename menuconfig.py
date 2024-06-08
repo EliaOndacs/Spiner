@@ -4,6 +4,8 @@ import sys,os
 
 
 
+
+
 def __fu__(_o: list, _to: int, _with: Any):
     new_o = _o
     if len(_o) >= _to:
@@ -16,11 +18,13 @@ def __fu__(_o: list, _to: int, _with: Any):
 FILE: list[str] = open(Spin,"r").read().split("\n")
 
 
+
 TermSize = (os.get_terminal_size().columns,os.get_terminal_size().lines)
 ValidInputModes = [
     ["command",Fore.LIGHTBLUE_EX + ">"],
     ["write",Fore.GREEN + ":"]
 ]
+
 
 
 def main():
@@ -53,15 +57,13 @@ def main():
                     with open(Spin,"w") as output:
                         for line in FILE:
                             output.write(line + "\n")
-                        output.close()
+                    output.close()
                 case ["SetCursor",ln] | ["sc",ln]:
                     cursor = int(ln)
                 case ["rml", ln] | ["RemoveLine", ln]:
                     del FILE[int(ln)]
                 case ["q"] | ["quit"]:
                     exit()
-                case ["reload"] | ["r"]:
-                    FILE = open(Spin,"r").read().split("\n")
                 case ["write"] | ["w"]:
                     InputMode = ValidInputModes[1]
                 case _:
