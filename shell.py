@@ -43,9 +43,9 @@ def OneLine(line: str):
                 case "all":
                     RunCommand(config["Pkg"]["All"],list(commands))
                 case "fetch":
-                    response = requests.get(sys.argv[1])
+                    response = requests.get(list(commands)[1])
                     if response.status_code == 200:
-                        with open(sys.argv[2], 'wb') as f:
+                        with open(list(commands)[0], 'wb') as f:
                             f.write(response.content)
                         print(Fore.GREEN + 'Content downloaded successfully!' + Style.RESET_ALL)
                     else:

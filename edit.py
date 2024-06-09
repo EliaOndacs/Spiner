@@ -92,11 +92,11 @@ def main():
 try:
     main()
     #restoring the pressed keys
-    os.system("cls||clear")
+    os.system("cls || clear")
     #
 except KeyboardInterrupt:
     #restoring the pressed keys
-    os.system("cls||clear")
+    os.system("cls || clear")
     #
     exit()
 except Exception as err:
