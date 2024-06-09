@@ -52,8 +52,8 @@ def OneLine(line: str):
                         print(Fore.RED + 'Failed to download the Content.' + Style.RESET_ALL)
 
 def RunFromFile(path: str):
-    if not path.endswith(".SpinSh"):
-        print(Fore.RED + "Invalid file extension. Only .SpinSh files are supported." + Style.RESET_ALL)
+    if not path.endswith(".sph"):
+        print(Fore.RED + "Invalid file extension. Only .sph files are supported." + Style.RESET_ALL)
         exit(-1)
     with open(path) as f:
         program = (f.read()).split("\n")
