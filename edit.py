@@ -55,8 +55,8 @@ def main():
         lineTaken += 1
         #input
         inp = input(InputMode[1]+" "+Fore.CYAN)
-        if LastRecordedFilePath:
-            FILE = open(LastRecordedFilePath,"r").read().split("\n")
+        #if LastRecordedFilePath:
+        #    FILE = open(LastRecordedFilePath,"r").read().split("\n")
         if InputMode[0] == "command":
             match inp.split():
                 case ["save",fp] | ["s",fp]:

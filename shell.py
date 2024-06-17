@@ -6,6 +6,10 @@ def OneLine(line: str):
     match line.split(" "):
         case ["exit"]:
             exit()
+        case ["cd",path]:
+            os.chdir(path)
+        case ["list"]:
+            print(os.listdir(os.getcwd()))
         case ["Create",type,path]:
             t = GetType(type)
             target = path
