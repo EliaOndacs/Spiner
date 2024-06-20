@@ -21,8 +21,8 @@ FILE: list[str] = open(Spin,"r").read().split("\n")
 
 TermSize = (os.get_terminal_size().columns,os.get_terminal_size().lines)
 ValidInputModes = [
-    ["command",Fore.LIGHTBLUE_EX + ">"],
-    ["write",Fore.GREEN + ":"]
+    ["command",Fore.LIGHTBLUE_EX + ">"], # type: ignore
+    ["write",Fore.GREEN + ":"] # type: ignore
 ]
 
 

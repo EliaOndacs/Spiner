@@ -13,8 +13,8 @@ match sys.argv[1]:
     case "fetch":
         response = requests.get(sys.argv[1])
         if response.status_code == 200:
-            with open(sys.argv[2], 'wb') as f:
-                f.write(response.content)
+            with open(sys.argv[2], 'wb') as f: #type: ignore
+                f.write(response.content) #type: ignore
             print(Fore.GREEN + 'Content downloaded successfully!' + Style.RESET_ALL)
         else:
             print(Fore.RED + 'Failed to download the Content.' + Style.RESET_ALL)
