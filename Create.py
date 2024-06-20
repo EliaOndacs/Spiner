@@ -8,6 +8,8 @@ if t == -1:
 
 if t == OBJT_DIR:
     os.mkdir(target)
+elif t == STRUCTURE:
+    struct(target,"NULL")
 elif t == OBJT_FILE:
     with open(target,"w") as f:
         f.close()
